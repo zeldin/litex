@@ -185,7 +185,7 @@ static void print_progress(const char * header, unsigned int offset, unsigned in
 {
 	printf("%s 0x%x-0x%x ", header, offset, offset + addr);
 	print_size(addr);
-	printf("   \r");
+	printf("\e[K\r");
 }
 
 int memtest_data(unsigned int *addr, unsigned long size, int random, struct memtest_config *config)
