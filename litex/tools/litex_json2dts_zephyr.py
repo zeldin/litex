@@ -242,8 +242,9 @@ overlay_handlers = {
         'size': 0x10,
         'config_entry': 'SD_LITESD'
     },
-    'i2c0' : {
+    'i2c' : {
         'handler': i2c_handler,
+        'alias': 'i2c0',
         'config_entry': 'I2C_LITEX'
     },
     'i2s_rx' : {
