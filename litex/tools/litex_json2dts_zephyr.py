@@ -297,6 +297,9 @@ def generate_dts_config(csr):
     cnf += ' -DCONFIG_LITEX_CSR_DATA_WIDTH={}'.format(
         csr['constants']['config_csr_data_width'],
     )
+    cnf += ' -DCONFIG_SYS_CLOCK_HW_CYCLES_PER_SEC={}'.format(
+        csr['constants']['config_clock_frequency']
+    )
 
     return dts, cnf
 
