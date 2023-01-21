@@ -32,7 +32,7 @@ def get_registers_of(name, csr):
             'size': params['size'] * 4,
             'name': r[len(name) + 1:],
         }
-        for r, params in registers.items() if r.startswith(name)
+        for r, params in registers.items() if r.startswith(name + '_')
     ]
 
 
@@ -197,6 +197,10 @@ overlay_handlers = {
         'handler': peripheral_handler,
         'alias': 'uart0',
         'config_entry': 'UART_LITEUART'
+    },
+    'uart2': {
+        'handler': peripheral_handler,
+        'alias': 'uart1',
     },
     'timer0': {
         'handler': peripheral_handler,
